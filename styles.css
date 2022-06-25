@@ -1,7 +1,64 @@
-body {
-    background-color: white;
-
+*{
+    padding:0;
+    margin:0
 }
+body{
+    background-color: white;
+}
+/*.........Landing page.....................*/
+#landing{
+    background-color: black;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-wrap: wrap;
+}
+.row1{
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+  
+/*need to make this responsive*/
+#mid_line{
+    width:20vw;
+    justify-content:center;
+    padding:0;
+    margin:0
+}
+
+.side_line{
+    background-color: white;
+    width:40vw;
+    height:1px
+}
+
+#landing_txt{
+    font-size: 7rem;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    width:100%;
+    text-align: center;
+}
+
+#landing_button{
+    width:7%;
+    height:60px;
+    border-radius:15px;
+    padding:10px;
+    vertical-align:middle;
+    border:0.5px solid rgb(156, 156, 156);
+    background-color:black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color:white;
+}
+/*............Landing Page Ends..................*/
+
+
 
 #container{
     width:100vw;
@@ -14,6 +71,5 @@ body {
 h1{
     font-size: 100px;
     text-align: left;
-    border-left:10px solid pink;
-    padding: 100px 20px
+    padding: 100px 20px;
 }
