@@ -1,2 +1,11 @@
 # Web-Portfolio
-Repository of information as I learn to code and build a web portfolio
+[WORK IN PROGRESS]
+This is the official repository of my web portfolio. 
+
+It is continuously a work in progress as I learn to code, and expand my knowledge of web development, machine learning and deployment. 
+
+- Design Development
+- Front End Development
+- Back End Development
+- Projects
+    - This web portfolio is a project showcase in itself...
