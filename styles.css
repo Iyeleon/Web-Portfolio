@@ -1,7 +1,7 @@
 *{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+    /* padding:0;
+    margin:0; */
+    /* box-sizing: border-box; */
 }
 body{
     background-color: white;
@@ -13,7 +13,7 @@ html{
 /*.........Landing page.....................*/
 #landing{
     background-color: black;
-    width:100vw;
+    width:100%;
     height:100vh;
     display: flex;
     justify-content:center;
@@ -92,16 +92,7 @@ html{
 
 /*............Landing Page Ends..................*/
 
-/*.......................main content scroll page.................*/
-/*main page holder*/
-#contents{
-    width:100vw;
-    height:300vh;
-    display: flex;
-    justify-content:center;
-    align-content:start;
-    flex-wrap: wrap;
-}
+/*...............nav bar.........................*/
 /*header/navbar*/
 header{
     position:sticky;
@@ -129,19 +120,79 @@ nav li{
     list-style: none;
     color:red
 }
+/*...............nav bar.........................*/
+
+/*.......................main content scroll page.................*/
+/*main page holder*/
+#contents{
+    width:auto;
+    height:auto;
+    display: flex;
+    justify-content:center;
+    align-content:start;
+    flex-wrap: wrap;
+}
 
 /*holder for contents*/
 .container{
     width:100vw;
     padding:0;
-    height:auto;
+    margin:0;
+    height:100vh;
     display:flex;
     justify-content:center;
     align-content:start;
     flex-wrap: wrap;
 }
-/*projects*/
-#project-grid-wrapper{
+
+.stack{
+    z-index:4;
+}
+
+/*projects slideshow*/
+.slideshow{
+    position:relative;
+    display:block;
+
+}
+
+.slide{
+ width:100%;
+ height:100%;
+ background-color: aqua;
+}
+
+.slidetxt{
+    width:100%;
+    height:100%;
+    padding: 30px 20px;
+    display:flex;
+    color:white;
+    position:absolute;
+}
+
+.slideimg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    object-fit:cover;
+    object-position:100% 50% ;
+}
+
+h1.project_header{
+    font-size:5rem;
+    font-family:fantasy;
+    font-weight: bold;
+}
+
+p.project_text{
+    font-size:1.5rem;
+    color:rgb(156, 153, 153);
+    font-family:'Courier New', Courier, monospace
+}
+
+/*sketches*/
+#sketch-grid-wrapper{
     width:90vw;
     padding:5vh 0vh;
     height:200vh;
@@ -151,15 +202,15 @@ nav li{
     grid-gap: 20px;
 }
 
-.project_block{
+.sketch_block{
     background-color: rgb(240, 240, 240);
     font-size:2rem;
 }
 
 /*about*/
-#about{
+.about{
     background-color: rgb(240,240,240);
-    height:100vh;
+    height:100%;
     width:100%;
     margin: 0;
     padding: 0;
