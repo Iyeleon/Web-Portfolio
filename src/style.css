@@ -1,3 +1,5 @@
+/* define default variables*/
+
 *{
     /* padding:0;
     margin:0; */
@@ -10,6 +12,16 @@ body{
 html{
     font-size: 10px;
 }
+
+/*...............nav bar.........................*/
+/*header/navbar*/
+#navbar{
+    position:fixed;
+    width:100%;
+    height:6vh;
+    top:0;
+}
+/*...............nav bar.........................*/
 /*.........Landing page.....................*/
 #landing{
     background-color: black;
@@ -92,35 +104,7 @@ html{
 
 /*............Landing Page Ends..................*/
 
-/*...............nav bar.........................*/
-/*header/navbar*/
-header{
-    position:sticky;
-    width:100vw;
-    height:3vh;
-    padding:2vh 0vh;
-    display:flex;
-    justify-content: center;
-    top:0;
-    background-color:rgba(255, 255, 255, 0.2);
-}
 
-nav{
-    width:90vw;
-    height:100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-nav li{
-    display:inline;
-    padding-right:30px;
-    font-size: 1.2rem;
-    list-style: none;
-    color:red
-}
-/*...............nav bar.........................*/
 
 /*.......................main content scroll page.................*/
 /*main page holder*/

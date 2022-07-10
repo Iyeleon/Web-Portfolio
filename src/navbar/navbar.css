@@ -1,0 +1,35 @@
+$small_font:10px;
+$bigFont:50px;
+$primary_color:#ff0000;
+$sec_color:#00ff00;
+
+/*This is just me testing out scss format to get used to it*/
+/*...............nav bar.........................*/
+/*header/navbar*/
+header{
+    position:sticky;
+    width:100vw;
+    height:3vh;
+    padding:2vh 0vh;
+    display:flex;
+    justify-content: center;
+    top:0;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+nav{
+    width:90vw;
+    height:100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+nav li{
+    display:inline;
+    padding-right:30px;
+    font-size: 1.2rem;
+    list-style: none;
+    color:red
+}
+/*...............nav bar.........................*/
