@@ -23,6 +23,48 @@ html{
     top:0;
 }
 /*...............nav bar.........................*/
+
+
+
+
+
+
+
+/*.......................main content scroll page.................*/
+/*main page holder*/
+#contents{
+    width:auto;
+    height:auto;
+    display: flex;
+    justify-content:center;
+    align-content:start;
+    flex-wrap: wrap;
+}
+
+/*holder for contents*/
+.container{
+    width:100vw;
+    padding:0;
+    margin:0;
+    display:flex;
+    /* justify-content:center; */
+    align-content:start;
+    flex-wrap: wrap;
+    position:relative;
+}
+
+.full{
+height:100vh
+}
+
+.half{
+    height:50vh;
+}
+
+.stack{
+    z-index:4;
+}
+
 /*.........Landing page.....................*/
 #landing{
     background-color: black;
@@ -101,48 +143,18 @@ html{
         font-size:1.5em
     }    
 }
-
-
 /*............Landing Page Ends..................*/
 
-
-
-/*.......................main content scroll page.................*/
-/*main page holder*/
-#contents{
-    width:auto;
-    height:auto;
-    display: flex;
-    justify-content:center;
-    align-content:start;
-    flex-wrap: wrap;
+/*-------------About Page........................*/
+/*about*/
+#about{
+    background-color: rgb(240,240,240);
+    margin: 0;
+    padding: 0;
 }
+/*.............About Page Ends...................*/
 
-/*holder for contents*/
-.container{
-    width:100vw;
-    padding:0;
-    margin:0;
-    display:flex;
-    /* justify-content:center; */
-    align-content:start;
-    flex-wrap: wrap;
-    position:relative;
-}
-
-.full{
-height:100vh
-}
-
-.half{
-    height:50vh;
-}
-
-.stack{
-    z-index:4;
-}
-
-/*projects slideshow*/
+/*............projects slideshow...................*/
 .slideshow{
     /* position:relative; */
     display:flex;
@@ -216,14 +228,34 @@ p.project_text{
     width:70px;
     height:8vh;
     background-color: rgba(255, 255, 255, 0.7);
-    display:inline;
-
-    
+    display:inline;   
 }
 
 #right{
     right:0px;
 } 
+/*............Projects Slideshow Ends...................*/
+
+/*............Skills...................*/
+#skills{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:black;
+}
+
+/*............Skills Ends...................*/
+
+/*............Contact...................*/
+#contact{
+    background-color: black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/*............Contact Ends...................*/
+
+
 
 
 /*sketches*/
@@ -241,15 +273,3 @@ p.project_text{
     background-color: rgb(240, 240, 240);
     font-size:2rem;
 }
-
-/*about*/
-#about{
-    background-color: rgb(240,240,240);
-    margin: 0;
-    padding: 0;
-}
-
-#contact{
-    background-color: black;
-}
-
