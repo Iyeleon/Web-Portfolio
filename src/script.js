@@ -1,8 +1,10 @@
-//Get navbar into the scene
+//navbar change
 const nav = document.querySelector('#navbar');
 console.log(nav)
 
-const sass = require('sass');
+//Slideshow
+let slides = document.querySelectorAll('.slide');
+console.log(slides)
 
-const result = sass.compile("./src/styles.scss");
-console.log(result.css);
+//1. get slide
+

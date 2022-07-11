@@ -1,9 +1,10 @@
 /* define default variables*/
 
 *{
-    /* padding:0;
-    margin:0; */
-    /* box-sizing: border-box; */
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    /* overflow:auto; */
 }
 body{
     background-color: white;
@@ -17,7 +18,7 @@ html{
 /*header/navbar*/
 #navbar{
     position:fixed;
-    width:100%;
+    width:100vw;
     height:6vh;
     top:0;
 }
@@ -122,11 +123,19 @@ html{
     width:100vw;
     padding:0;
     margin:0;
-    height:100vh;
     display:flex;
-    justify-content:center;
+    /* justify-content:center; */
     align-content:start;
     flex-wrap: wrap;
+    position:relative;
+}
+
+.full{
+height:100vh
+}
+
+.half{
+    height:50vh;
 }
 
 .stack{
@@ -135,20 +144,19 @@ html{
 
 /*projects slideshow*/
 .slideshow{
-    position:relative;
-    display:block;
-
+    /* position:relative; */
+    display:flex;
 }
 
+#slide, #about, #skills, #contact, .slide, .slideimg, .slidetxt{
+    width:100%;
+    height:100%;
+}
 .slide{
- width:100%;
- height:100%;
- background-color: aqua;
+    position:absolute;
 }
 
 .slidetxt{
-    width:100%;
-    height:100%;
     padding: 30px 20px;
     display:flex;
     color:white;
@@ -156,8 +164,6 @@ html{
 }
 
 .slideimg{
-    width:100%;
-    height:100%;
     position:absolute;
     object-fit:cover;
     object-position:100% 50% ;
@@ -174,6 +180,51 @@ p.project_text{
     color:rgb(156, 153, 153);
     font-family:'Courier New', Courier, monospace
 }
+
+.counter{
+    width:100%;
+    align-items: center;
+    height:auto;
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    bottom:10px;
+    background-color:aqua;
+    z-index: 20; 
+}
+
+.circ{
+    width:10px;
+    height:10px;
+    margin:5px;
+    border-radius:5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display:inline;
+}
+.arrows{
+    width:100%;
+
+    display:flex;
+    flex-wrap: wrap;
+
+    z-index: 20; 
+}
+
+#left, #right{
+    position:absolute;
+    bottom:46vh;
+    width:70px;
+    height:8vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    display:inline;
+
+    
+}
+
+#right{
+    right:0px;
+} 
+
 
 /*sketches*/
 #sketch-grid-wrapper{
@@ -192,11 +243,13 @@ p.project_text{
 }
 
 /*about*/
-.about{
+#about{
     background-color: rgb(240,240,240);
-    height:100%;
-    width:100%;
     margin: 0;
     padding: 0;
+}
+
+#contact{
+    background-color: black;
 }
 
