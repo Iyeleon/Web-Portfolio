@@ -4,31 +4,36 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
-    /* overflow:auto; */
+
 }
 body{
-    background-color: white;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-html{
+:root{
     font-size: 10px;
+    --base_color:#101010;
 }
 
 /*...............nav bar.........................*/
 /*header/navbar*/
-#navbar{
+
+.nav{
+    width:100%;
+    max-height: 10%;
+    height:90px;
     position:fixed;
-    width:100vw;
-    height:6vh;
-    top:0;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#navbar{
+    width:90vw;   
 }
 /*...............nav bar.........................*/
-
-
-
-
-
-
 
 /*.......................main content scroll page.................*/
 /*main page holder*/
@@ -47,7 +52,6 @@ html{
     padding:0;
     margin:0;
     display:flex;
-    /* justify-content:center; */
     align-content:start;
     flex-wrap: wrap;
     position:relative;
@@ -61,13 +65,18 @@ height:100vh
     height:50vh;
 }
 
+.wide{
+    width:100%;
+    position:relative;
+}
+
 .stack{
     z-index:4;
 }
 
 /*.........Landing page.....................*/
 #landing{
-    background-color: black;
+    background-color: var(--base_color);
     width:100%;
     height:100vh;
     display: flex;
@@ -75,6 +84,86 @@ height:100vh
     align-content:center;
     flex-wrap: wrap;
 }
+
+#landing_grid{
+    width:50%;
+    height:80%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr;
+}
+
+.lndn_ctr{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  auto 1fr 1fr;
+    grid-gap: 10px;
+    padding:10px;
+}
+.top{
+    display:flex;
+    flex-wrap: wrap;
+    padding:1% 0;
+}
+
+.mid>p{
+    font-size:2rem;
+    position:absolute;
+    line-height:5rem;
+}
+
+
+.landing_txt{
+    --size: 9rem;
+    font-weight: 900;
+    font-size: var(--size);
+    color:white;
+    width:100%;
+    vertical-align: middle;
+    padding:0;
+    margin:0;
+    position:relative;
+}
+
+#landing_button{
+    width:60%;
+    height:2em;
+    border-radius:0.5em;
+    padding:0px;
+    text-align: center;
+    vertical-align:middle;
+    border:0.5px solid rgb(156, 156, 156);
+    background-color:black;
+    font-size: 1.2rem;
+    color:white;
+    transition: transform 1s ease-out;  
+    position:absolute;
+    bottom:0
+}
+
+#lndn_btn>a{
+    color:white;
+    text-decoration: None;
+}
+
+#landing_button:hover{
+    transform:scale(1.1, 1.1);
+    border:3px solid;
+    transition: transform 1s ease-out;
+}
+
+@media screen and (max-width:1200px){
+    #landing_button{
+        width:100%;
+        font-size:0.8em
+    }
+
+    #landing_txt{
+        font-size:1.5em;
+        line-height:8rem
+    }    
+}
+
 .row1{
     width:100%;
     height:auto;
@@ -98,51 +187,6 @@ height:100vh
     width:100%
 }
 
-#landing_txt{
-    font-size: 2em;
-    font-family: 'Courier New', Courier, monospace;
-    color:white;
-    width:100%;
-    text-align: center;
-}
-
-#landing_button{
-    width:60%;
-    height:2em;
-    border-radius:0.5em;
-    padding:0px;
-    text-align: center;
-    vertical-align:middle;
-    border:0.5px solid rgb(156, 156, 156);
-    background-color:black;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2rem;
-    color:white;
-    transition: transform 1s ease-out;
-    
-}
-
-#landing_button>a{
-    color:white;
-    text-decoration: None;
-}
-
-#landing_button:hover{
-    transform:scale(1.1, 1.1);
-    border:3px solid;
-    transition: transform 1s ease-out;
-}
-
-@media screen and (max-width:1200px){
-    #landing_button{
-        width:100%;
-        font-size:0.8em
-    }
-
-    #landing_txt{
-        font-size:1.5em
-    }    
-}
 /*............Landing Page Ends..................*/
 
 /*-------------About Page........................*/
