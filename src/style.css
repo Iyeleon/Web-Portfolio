@@ -90,7 +90,7 @@ height:100vh
     height:80%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
 }
 
 .lndn_ctr{
@@ -106,15 +106,22 @@ height:100vh
     padding:1% 0;
 }
 
+.mid{
+    overflow:hidden;
+    position:relative;
+    height:auto;
+}
+
 .mid>p{
     font-size:2rem;
+    line-height:100%;
+    width:auto;
     position:absolute;
-    line-height:5rem;
 }
 
 
 .landing_txt{
-    --size: 9rem;
+    --size:8rem;
     font-weight: 900;
     font-size: var(--size);
     color:white;
@@ -151,6 +158,17 @@ height:100vh
     border:3px solid;
     transition: transform 1s ease-out;
 }
+
+.is_visible{
+    position:absolute;
+    animation: movedown 2s cubic-bezier(0, 0, 1, 1) 0s  1 normal forwards;
+}
+
+@keyframes movedown{
+    from{top:-100%}
+    to{top:15%}
+}
+
 
 @media screen and (max-width:1200px){
     #landing_button{
