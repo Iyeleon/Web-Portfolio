@@ -113,7 +113,7 @@ height:100vh
 }
 
 .mid>p{
-    font-size:2rem;
+    font-size:2.5rem;
     line-height:100%;
     width:auto;
     position:absolute;
@@ -161,12 +161,14 @@ height:100vh
 
 .is_visible{
     position:absolute;
-    animation: movedown 2s cubic-bezier(0, 0, 1, 1) 0s  1 normal forwards;
+    animation: movedown 3.5s cubic-bezier(0, 0, 1, 1) 0s  1 normal forwards;
 }
 
 @keyframes movedown{
-    from{top:-100%}
-    to{top:15%}
+    0% {top:-100%}
+    25% {top:15%}
+    75% {top:15%}
+    100%{top:100%}
 }
 
 

@@ -24,10 +24,10 @@ function textSlides(){
     mtn[index].style.display='block'
     index++
     if (index === mtn.length){
-        setTimeout(textSlides, 5000)
+        setTimeout(textSlides, 3500)
     }
     else{
-        setTimeout(textSlides, 3000)
+        setTimeout(textSlides, 3500)
     }
     
     
