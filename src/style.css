@@ -90,20 +90,20 @@ height:100vh
     height:80%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1.25fr 2fr 1.25fr;
 }
 
 .lndn_ctr{
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows:  auto 1fr 1fr;
-    grid-gap: 10px;
-    padding:10px;
+    gap: 5px;
+    padding: 5px;
 }
 .top{
     display:flex;
     flex-wrap: wrap;
-    padding:1% 0;
+    /* padding:1% 0; */
 }
 
 .mid{
@@ -113,10 +113,12 @@ height:100vh
 }
 
 .mid>p{
-    font-size:2.5rem;
+    --font:2rem;
+    font-size:var(--font);
     line-height:100%;
     width:auto;
     position:absolute;
+    /* top:calc(50% - (var(--font) / 2)); */
 }
 
 
@@ -166,9 +168,9 @@ height:100vh
 
 @keyframes movedown{
     0% {top:-100%}
-    25% {top:15%}
-    75% {top:15%}
-    100%{top:100%}
+    30% {top:calc(50% - 1rem)}
+    70% {top:calc(50% - 1rem) }
+    100% {top:100%}
 }
 
 

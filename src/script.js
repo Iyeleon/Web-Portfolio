@@ -23,12 +23,16 @@ function textSlides(){
     mtn[index].setAttribute('class', 'is_visible');
     mtn[index].style.display='block'
     index++
-    if (index === mtn.length){
-        setTimeout(textSlides, 3500)
-    }
-    else{
-        setTimeout(textSlides, 3500)
-    }
+
+    setTimeout(textSlides, 3500)
+
+
+    // if (index === mtn.length){
+    //     setTimeout(textSlides, 4500)
+    // }
+    // else{
+    //     setTimeout(textSlides, 3500)
+    // }
     
     
     // console.log('waiting for two seconds')
