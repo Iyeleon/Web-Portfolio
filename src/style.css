@@ -86,78 +86,91 @@ height:100vh
 }
 
 #landing_grid{
-    width:50%;
+    max-width:90%;
     height:80%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.25fr 2fr 1.25fr;
+    grid-template-rows: 1.2fr auto 1.2fr;
 }
 
 .lndn_ctr{
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows:  auto 1fr 1fr;
-    gap: 5px;
-    padding: 5px;
+    grid-template-rows:  auto 1fr 2fr;
+    gap: 0.5rem;
+    padding: 1rem;
 }
 .top{
     display:flex;
-    flex-wrap: wrap;
-    /* padding:1% 0; */
+    align-content:flex-end;
+    flex-wrap: wrap; 
+    justify-content: center;   
+}
+
+.landing_txt{
+    --size:8rem;
+    /* width:100%; */
+    line-height:100%;
+    margin:0px;
+    position:relative;
+    font-size: var(--size);
+    font-weight: 900;
 }
 
 .mid{
     overflow:hidden;
     position:relative;
-    height:auto;
+    display:flex;
+    justify-content:center;
+    height:5rem;
+
 }
 
 .mid>p{
-    --font:2rem;
+    --font:2.25rem;
     font-size:var(--font);
     line-height:100%;
+    font-weight:500;
     width:auto;
     position:absolute;
     /* top:calc(50% - (var(--font) / 2)); */
 }
 
-
-.landing_txt{
-    --size:8rem;
-    font-weight: 900;
-    font-size: var(--size);
-    color:white;
-    width:100%;
-    vertical-align: middle;
-    padding:0;
-    margin:0;
+.btm{
+    width:auto;
     position:relative;
+    max-height:8rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1.5rem 0;
+    vertical-align: middle;
 }
 
-#landing_button{
-    width:60%;
-    height:2em;
-    border-radius:0.5em;
-    padding:0px;
+
+#lndn_btn{
+    width:auto;
+    height:100%;
+    padding:2px 7rem;
+    border-radius:4rem;
+    display:flex;
+    align-items: center;
     text-align: center;
-    vertical-align:middle;
-    border:0.5px solid rgb(156, 156, 156);
-    background-color:black;
-    font-size: 1.2rem;
-    color:white;
-    transition: transform 1s ease-out;  
-    position:absolute;
-    bottom:0
+    /* border:0.5px solid rgb(156, 156, 156); */
+    background-color:white;
+    /* background-color:var(--base_color); */
+    font-size: 1.5rem;
+    font-weight:300;
+    color:black;
+    /* color:white; */
+    transition: transform 1s ease-out;
+
 }
 
-#lndn_btn>a{
-    color:white;
-    text-decoration: None;
-}
-
-#landing_button:hover{
-    transform:scale(1.1, 1.1);
-    border:3px solid;
+#lndn_btn:hover{
+    transform:scale(1.05, 1.05);
+    text-decoration: none;
+    /* border:3px solid; */
     transition: transform 1s ease-out;
 }
 
@@ -173,17 +186,34 @@ height:100vh
     100% {top:100%}
 }
 
-
-@media screen and (max-width:1200px){
-    #landing_button{
-        width:100%;
-        font-size:0.8em
+@media screen and (max-width:1280px){
+    :root{
+        font-size:8.5px;
     }
+}
 
-    #landing_txt{
-        font-size:1.5em;
-        line-height:8rem
+@media screen and (max-width:920px){
+    :root{
+        font-size:7px;
+    }
+}
+
+@media screen and (max-width:600px){
+    :root{
+        font-size:4.5px;
+    }
+}
+
+@media screen and (max-width:320px){
+    :root{
+        font-size:3.75px;
+    }
+    #lndn_btn{
+        font-size:1.5rem
     }    
+    .mid>p{
+        font-size:2rem;
+    } 
 }
 
 .row1{
@@ -235,10 +265,11 @@ height:100vh
 }
 
 .slidetxt{
-    padding: 30px 20px;
+    padding: 5rem 8rem;
     display:flex;
     color:white;
-    position:absolute;
+    position:relative;
+    align-items:flex-end;
 }
 
 .slideimg{
@@ -247,16 +278,21 @@ height:100vh
     object-position:100% 50% ;
 }
 
+.project-info{
+    width:50rem;
+    position:absolute;
+    right:8rem;
+}
+
 h1.project_header{
     font-size:5rem;
-    font-family:fantasy;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 p.project_text{
     font-size:1.5rem;
+    font-weight:300;
     color:rgb(156, 153, 153);
-    font-family:'Courier New', Courier, monospace
 }
 
 .counter{
@@ -267,7 +303,7 @@ p.project_text{
     justify-content: center;
     position:absolute;
     bottom:10px;
-    background-color:aqua;
+    /* background-color:aqua; */
     z-index: 20; 
 }
 
@@ -280,26 +316,42 @@ p.project_text{
     display:inline;
 }
 .arrows{
+    stroke:white;
+    stroke-width:4px;
+    stroke-linecap:round;
     width:100%;
-
-    display:flex;
-    flex-wrap: wrap;
-
-    z-index: 20; 
+    height:auto;
+    fill:none;
 }
 
-#left, #right{
+.arrow-wrapper{
     position:absolute;
     bottom:46vh;
-    width:70px;
-    height:8vh;
-    background-color: rgba(255, 255, 255, 0.7);
+    width:12rem;
+    height:55px;
+    border-radius:35px;
+    background-color:none;
+    border:1px rgba(255, 255, 255, 0.5) solid;
     display:inline;   
 }
 
+/* svg.arrow-wrapper{
+    height:100%;
+    padding:0px;
+    margin:0px;
+} */
+
+#left{
+    left:1rem;
+}
+
 #right{
-    right:0px;
+    right:1rem;
 } 
+
+/* #left:hover{
+    background-color:white
+} */
 /*............Projects Slideshow Ends...................*/
 
 /*............Skills...................*/

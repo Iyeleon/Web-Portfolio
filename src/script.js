@@ -5,7 +5,7 @@
 
 //Landing page animation
 let index = 0;
-let mtn = document.querySelector('#mtn_txt').children
+let mtn = document.querySelector('.mid').children
 console.log(mtn)
 // console.log(mtn.length)
 textSlides()
@@ -140,4 +140,34 @@ function textSlides(){
 // console.log(typeof(slides))
 
 // //1. get slide
+
+
+
+//arrow UI functions
+const arrowFill = (e)=>{
+    e.target.style.backgroundColor= '#ffffff35'
+    e.target.children[0].style.stroke = 'black'
+    e.target.style.border='none'
+    e.target.style.cursor='pointer'
+}
+
+const arrowEmpty = (e)=>{
+    e.target.style.backgroundColor='black'
+    e.target.children[0].style.stroke = 'white'
+    e.target.style.border='1px solid #ffffff20'
+    e.target.style.cursor='default'
+}
+//arrow button hover
+let arrowLeft = document.querySelector("#left");
+let arrowRight = document.querySelector("#right")
+
+//On mouse over/out
+arrowLeft.addEventListener('mouseenter', arrowFill, 'False');
+arrowLeft.addEventListener('mouseleave', arrowEmpty, 'False');
+
+arrowRight.addEventListener('mouseenter', arrowFill, 'False');
+arrowRight.addEventListener('mouseleave', arrowEmpty, 'False');
+
+
+//on mouseclick
 
