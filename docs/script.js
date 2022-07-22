@@ -77,7 +77,7 @@ function textSlides(){
     mtn[index].style.display='block'
     index++
 
-    setTimeout(textSlides, 4000)
+    setTimeout(textSlides, 4500)
 
 
     // if (index === mtn.length){
