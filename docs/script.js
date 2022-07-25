@@ -4,13 +4,66 @@
 
 
 //Landing page animation
+//transition 1
+
+
+
+// function landingSeries(){
+//     let grid = document.querySelector("#lndn-grd")
+//     let logo = document.querySelector(".lndn-ctr");
+//     let top = document.querySelector(".top")
+//     let text = document.querySelector(".mid")
+//     // let explore = document.querySelector(".btm")
+
+//     text.style.display = 'none'
+//     logo.style.gridTemplateColumns='1fr'
+//     logo
+
+
+    
+
+//     function displayText(){
+//         // explore.style.gridColumn= "span 2"
+//         logo.style.gridTemplateColumns='1.75fr 1fr'
+ 
+//         logo.style.transition = "all 2s linear 4s"
+
+//         // logo.style.backgroundColor = 'red'
+//         setTimeout(()=>{
+//             text.style.display = 'flex';
+//             // explore.style.display = 'flex'
+//         }, 1000)
+//         grid.style.maxWidth='75%'
+//     }
+
+//     // displayText()
+
+//     setTimeout(displayText, 2000)
+    
+
+    
+//     console.log(logo)
+//     console.log(text)
+//     // console.log(explore)
+
+// }
+
+// landingSeries()
+
+
 let index = 0;
-let mtn = document.querySelector('.mid').children
+let mtn = document.querySelector('.anim-wrapper').children
 console.log(mtn)
-// console.log(mtn.length)
+console.log(mtn.length)
+// await setTimeout(()=>{
+//     console.log('is this executing')
+//     mtn[0].setAttribute('class', '')}, 5000)
+// // setTimeout(()=>{}, 3000) 
 textSlides()
 
-function textSlides(){ 
+function textSlides(){
+    console.log('executing inside function')
+
     for(i=0; i<mtn.length; i++){
         mtn[i].setAttribute('class', '');
         mtn[i].style.display = 'none'
@@ -24,7 +77,7 @@ function textSlides(){
     mtn[index].style.display='block'
     index++
 
-    setTimeout(textSlides, 3500)
+    setTimeout(textSlides, 4500)
 
 
     // if (index === mtn.length){
@@ -147,15 +200,19 @@ function textSlides(){
 const arrowFill = (e)=>{
     e.target.style.backgroundColor= '#ffffff35'
     e.target.children[0].style.stroke = 'black'
+    e.target.children[0].style.strokeWidth = '2px'
     e.target.style.border='none'
     e.target.style.cursor='pointer'
+    console.log('filling')
 }
 
 const arrowEmpty = (e)=>{
-    e.target.style.backgroundColor='black'
-    e.target.children[0].style.stroke = 'white'
-    e.target.style.border='1px solid #ffffff20'
+    e.target.style.backgroundColor= ''
+    e.target.children[0].style.stroke = '#9999997f'
+    e.target.children[0].style.strokeWidth = '1px'
+    e.target.style.border='1px solid #9999997f'
     e.target.style.cursor='default'
+    console.log('removing')
 }
 //arrow button hover
 let arrowLeft = document.querySelector("#left");
@@ -163,10 +220,14 @@ let arrowRight = document.querySelector("#right")
 
 //On mouse over/out
 arrowLeft.addEventListener('mouseenter', arrowFill, 'False');
+arrowLeft.addEventListener('touchstart', arrowFill, 'False');
 arrowLeft.addEventListener('mouseleave', arrowEmpty, 'False');
+arrowLeft.addEventListener('touchend', arrowEmpty, 'False');
 
 arrowRight.addEventListener('mouseenter', arrowFill, 'False');
+arrowRight.addEventListener('touchstart', arrowFill, 'False');
 arrowRight.addEventListener('mouseleave', arrowEmpty, 'False');
+arrowRight.addEventListener('touchend', arrowEmpty, 'False');
 
 
 //on mouseclick
