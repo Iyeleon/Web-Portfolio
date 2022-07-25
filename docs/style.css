@@ -106,7 +106,7 @@ height:100vh
     overflow:hidden;
 
 }
-.left{
+.ldn_left{
     width:100%;
     position:relative;
     padding: 0 2rem 0 0;
@@ -118,14 +118,6 @@ height:100vh
     width:100%;
 }
 
-/* .landing_txt{
-    --size:8rem;
-    line-height:100%;
-    margin:0px;
-    position:relative;
-    font-size: var(--size);
-    font-weight: 900;
-} */
 
 @keyframes slideLogo{
     0%{width:100% 
@@ -159,7 +151,7 @@ height:100vh
     }  
 }
 
-.right{
+.ldn_right{
     overflow:hidden;
     position:absolute;
     display:flex;
@@ -194,11 +186,6 @@ height:100vh
 
 .is_visible{
     animation: moveside 4.5s linear 0s  1 normal forwards;
-}
-
-@keyframes movedown{
-    0% {top:-100%}
-    100% {top:100%}
 }
 
 @keyframes moveside{
@@ -375,30 +362,26 @@ p.project_text{
     display:inline;
 }
 .arrows{
-    stroke:white;
-    stroke-width:4px;
+    stroke: #9999997f;
+    stroke-width:1px;
     stroke-linecap:round;
     width:100%;
     height:auto;
     fill:none;
+
 }
 
 .arrow-wrapper{
     position:absolute;
     bottom:46vh;
     width:12rem;
-    height:55px;
-    border-radius:35px;
+    height:5rem;
+    border-radius:2.5rem;
     background-color:none;
-    border:1px rgba(255, 255, 255, 0.5) solid;
-    display:inline;   
-}
+    border:1px #9999997f solid;
+    display:inline; 
 
-/* svg.arrow-wrapper{
-    height:100%;
-    padding:0px;
-    margin:0px;
-} */
+}
 
 #left{
     left:1rem;
@@ -408,9 +391,6 @@ p.project_text{
     right:1rem;
 } 
 
-/* #left:hover{
-    background-color:white
-} */
 /*............Projects Slideshow Ends...................*/
 
 /*............Skills...................*/

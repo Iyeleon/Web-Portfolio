@@ -200,15 +200,19 @@ function textSlides(){
 const arrowFill = (e)=>{
     e.target.style.backgroundColor= '#ffffff35'
     e.target.children[0].style.stroke = 'black'
+    e.target.children[0].style.strokeWidth = '2px'
     e.target.style.border='none'
     e.target.style.cursor='pointer'
+    console.log('filling')
 }
 
 const arrowEmpty = (e)=>{
-    e.target.style.backgroundColor='black'
-    e.target.children[0].style.stroke = 'white'
-    e.target.style.border='1px solid #ffffff20'
+    e.target.style.backgroundColor= ''
+    e.target.children[0].style.stroke = '#9999997f'
+    e.target.children[0].style.strokeWidth = '1px'
+    e.target.style.border='1px solid #9999997f'
     e.target.style.cursor='default'
+    console.log('removing')
 }
 //arrow button hover
 let arrowLeft = document.querySelector("#left");
@@ -216,10 +220,14 @@ let arrowRight = document.querySelector("#right")
 
 //On mouse over/out
 arrowLeft.addEventListener('mouseenter', arrowFill, 'False');
+arrowLeft.addEventListener('touchstart', arrowFill, 'False');
 arrowLeft.addEventListener('mouseleave', arrowEmpty, 'False');
+arrowLeft.addEventListener('touchend', arrowEmpty, 'False');
 
 arrowRight.addEventListener('mouseenter', arrowFill, 'False');
+arrowRight.addEventListener('touchstart', arrowFill, 'False');
 arrowRight.addEventListener('mouseleave', arrowEmpty, 'False');
+arrowRight.addEventListener('touchend', arrowEmpty, 'False');
 
 
 //on mouseclick
