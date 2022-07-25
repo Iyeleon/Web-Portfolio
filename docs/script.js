@@ -52,7 +52,7 @@
 
 
 let index = 0;
-let mtn = document.querySelector('.mid').children
+let mtn = document.querySelector('.anim-wrapper').children
 console.log(mtn)
 console.log(mtn.length)
 // await setTimeout(()=>{
