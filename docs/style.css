@@ -14,6 +14,7 @@ body{
 :root{
     font-size: 10px;
     --base_color:#101010;
+    --coverage:70%;
 }
 
 /*...............nav bar.........................*/
@@ -21,8 +22,7 @@ body{
 
 .nav{
     width:100%;
-    max-height: 10%;
-    height:90px;
+    height:100%;
     position:fixed;
     color:white;
     display:flex;
@@ -30,8 +30,28 @@ body{
     align-items:center;
 }
 
+.nav-section{
+    width:var(--coverage);
+    height:100%;
+    position:relative;
+    
+}   
+#navbar, #scroll{
+    height:90px;
+    width:100%;
+    max-height:10%;
+    position:absolute;
+    display:flex;
+    align-items: center;
+    color:red;
+}
+
 #navbar{
-    width:90vw;   
+    top:0;
+}
+
+#scroll{
+    bottom:0;
 }
 /*...............nav bar.........................*/
 
@@ -90,7 +110,7 @@ height:100vh
 }
 
 #lndn-grd{
-    width:70%;
+    width:var(--coverage);
     height:80%;
     display:grid;
     grid-template-columns: 1fr;
@@ -235,6 +255,7 @@ height:100vh
 @media screen and (max-width:1280px){
     :root{
         font-size:8px;
+
     }
 }
 
@@ -253,6 +274,7 @@ height:100vh
 @media screen and (max-width:320px){
     :root{
         font-size:3.75px;
+        --coverage:70%;
     }
     #lndn_btn{
         font-size:1.5rem
